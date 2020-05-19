@@ -1,5 +1,10 @@
 ﻿Imports System.Net
 Module Module1
+	' In LGS Open File / URL:
+	' Path:      ->  C:\Source Code\API_Call\API_Call\bin\Debug\API_Call.exe
+	' Arguments: ->  "http://121.0.0.1:21212/api/Waypoints|{\"Id\": 1,\"Name\": \"Sad\"}"
+	'   you have to escape the " symbol using \"
+	'   
 	Sub Main()
 
 		Dim strArgs As String = Command()
