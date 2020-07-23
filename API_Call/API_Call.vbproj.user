@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>http://127.0.0.1:21212/api/Waypoints|{"Id": 1,"Name": "Sad"}</StartArguments>
+    <StartArguments>http://172.17.2.7:8080/api/variables/set|[{"Name": "Quantity", "Value": "18"},{"Name": "PartNumber", "Value": "ABCD1234"}]</StartArguments>
   </PropertyGroup>
 </Project>

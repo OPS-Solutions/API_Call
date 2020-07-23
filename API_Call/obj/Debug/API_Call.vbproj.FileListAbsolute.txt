@@ -2,7 +2,6 @@ C:\Source Code\API_Call\API_Call\bin\Debug\API_Call.exe.config
 C:\Source Code\API_Call\API_Call\bin\Debug\API_Call.exe
 C:\Source Code\API_Call\API_Call\bin\Debug\API_Call.pdb
 C:\Source Code\API_Call\API_Call\bin\Debug\API_Call.xml
-C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.vbprojAssemblyReference.cache
 C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.Resources.resources
 C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.vbproj.GenerateResource.cache
 C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.vbproj.CoreCompileInputs.cache

@@ -6,22 +6,27 @@ Module Module1
 	'   you have to escape the " symbol using \"
 	'   
 	Sub Main()
+		Try
+			Dim strArgs As String = Command()
+			Console.WriteLine("Arguments: " & strArgs)
+			Console.WriteLine("")
 
-		Dim strArgs As String = Command()
-		Console.WriteLine("Arguments: " & strArgs)
-		Console.WriteLine("")
+			If strArgs.Contains("?") OrElse (strArgs.Length < 2) Then
+				Log("Argument help (SpotGuide)", "http://127.0.0.1:21212/api/Waypoints|{""Id"": 1,""Name"": ""WaypointName1""}")
+				LogWithPause("Argument help (LightGuide)", "http://127.0.0.1:8080/api/variables/set|[{""Name"": ""Quantity"", ""Value"": ""18""},{""Name"": ""PartNumber"", ""Value"": ""ABCD1234""}]")
+				End
+			End If
 
-		If strArgs.Contains("?") Then
-			Log("Argument help", "http://127.0.0.1:21212/api/Waypoints|{""Id"": 1,""Name"": ""WaypointName1""}")
-			End
-		End If
+			Dim strArray As String() = strArgs.Split("|")
+			If UBound(strArray) = 1 Then
+				POST(strArray(0), strArray(1))
+			Else
+				LogWithPause("Bad arguments, use single pipe (|) as delimiter")
+			End If
+		Catch ex As Exception
+			LogWithPause("Error loading application: " & ex.ToString)
+		End Try
 
-		Dim strArray As String() = strArgs.Split("|")
-		If UBound(strArray) = 1 Then
-			POST(strArray(0), strArray(1))
-		Else
-			Log("Bad arguments, use single pipe (|) as delimiter")
-		End If
 	End Sub
 
 	Private Sub POST(ByVal URL_and_Endpoint As String, Optional ByVal body As String = "")
@@ -32,8 +37,11 @@ Module Module1
 
 				Dim result As String = wc.UploadString(URL_and_Endpoint, "POST", body)
 
-				If Not String.IsNullOrWhiteSpace(result) Then
+				If result?.ToUpper.Contains("EXCEPTION") Then
+					LogWithPause("Result:", result)
+				Else
 					Log("Result:", result)
+					Threading.Thread.Sleep(2000)
 				End If
 			End Using
 		Catch ex As Exception
@@ -41,6 +49,13 @@ Module Module1
 		End Try
 	End Sub
 	Private Sub Log(ParamArray ByVal strMessage As String())
+		For Each strLine As String In strMessage
+			Console.WriteLine(strLine)
+		Next
+
+		Console.WriteLine("")
+	End Sub
+	Private Sub LogWithPause(ParamArray ByVal strMessage As String())
 		For Each strLine As String In strMessage
 			Console.WriteLine(strLine)
 		Next
