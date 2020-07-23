@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("API_Call")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("HP Inc.")>
+<Assembly: AssemblyDescription("Script to make Web API POST commands using command line arguments")>
+<Assembly: AssemblyCompany("Ops Solutions, LLC")>
 <Assembly: AssemblyProduct("API_Call")>
-<Assembly: AssemblyCopyright("Copyright © HP Inc. 2020")>
+<Assembly: AssemblyCopyright("Copyright © Ops Solutions 2020")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.0.1")>
+<Assembly: AssemblyFileVersion("1.0.0.1")>

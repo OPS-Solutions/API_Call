@@ -8,3 +8,4 @@ C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.vbproj.CoreCompileInputs.cac
 C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.exe
 C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.xml
 C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.pdb
+C:\Source Code\API_Call\API_Call\obj\Debug\API_Call.vbprojAssemblyReference.cache

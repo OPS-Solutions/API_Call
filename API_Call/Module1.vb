@@ -45,7 +45,7 @@ Module Module1
 				End If
 			End Using
 		Catch ex As Exception
-			Log("Exception sending POST request", ex.ToString)
+			LogWithPause("Exception sending POST request", ex.ToString)
 		End Try
 	End Sub
 	Private Sub Log(ParamArray ByVal strMessage As String())
@@ -60,6 +60,7 @@ Module Module1
 			Console.WriteLine(strLine)
 		Next
 
+		Console.WriteLine("This executable is called 'API_Call' version " & My.Application.Info.Version.ToString)
 		Console.WriteLine("")
 		Console.WriteLine("Press any key to exit")
 		Console.ReadKey()
